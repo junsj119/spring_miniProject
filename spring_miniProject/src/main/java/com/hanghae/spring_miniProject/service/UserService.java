@@ -26,7 +26,7 @@ public class UserService {
         String username = requestDto.getUsername();
         Optional<User> found = userRepository.findByUsername(username);
         //- 데이터베이스에 존재하는 닉네임을 입력한 채 회원가입 버튼을 누른 경우 "중복된 닉네임입니다." 라는 에러메세지
-        if (found.isPresent())
+        if (found.isPresent()) 
             throw new IllegalArgumentException("중복된 닉네임입니다.");
 
         String nickname = requestDto.getNickname();

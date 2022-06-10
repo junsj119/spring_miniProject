@@ -53,7 +53,7 @@ public class UserService {
         //데이터 저장
         User user = new User(username, nickname, password, password_re);
         userRepository.save(user);
-        
+        //test
         return user;
     }
 }
